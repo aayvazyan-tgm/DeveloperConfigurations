@@ -3,3 +3,6 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 #git cleanup //Deletes all local repos except master, develop and the current branch
 git config alias.cleanup "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+
+#git amend //amend changes to the last commit and 
+git config --global alias.amend "git commit --amend --no-edit"
