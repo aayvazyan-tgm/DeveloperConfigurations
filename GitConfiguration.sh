@@ -13,5 +13,5 @@ git config --global alias.amend "commit --amend --no-edit"
 git config --global alias.pf "push --force"
 
 #git sb //switch branch by entering partial name
-git config --global alias.sco '!sh -c "git branch -a | grep -v remotes | grep $1 | xargs git checkout"'
+git config --global alias.sb '!sh -c "git branch -a | grep -v remotes | grep $1 | xargs git checkout"'
 
