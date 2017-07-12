@@ -1,4 +1,4 @@
-#Execute with git shell on windows
+#Execute with git bash on windows
 
 #git lg //pretty log
 git config --global alias.lg 'log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset" --abbrev-commit --date local'
@@ -15,3 +15,8 @@ git config --global alias.pf 'push --force'
 #git sb //switch branch by entering partial name
 git config --global alias.sb '!sh -c "git branch -a | grep -v remotes | grep $1 | xargs git checkout"'
 
+#git forget x //ignore changes to the file x
+git config --global alias.forget '!git ls-files -z $1 | xargs -0 git update-index --assume-unchanged'
+
+#git remember x //un ignore changes to the file x
+git config --global alias.remember '!git ls-files -z $1 | xargs -0 git update-index --no-assume-unchanged'
