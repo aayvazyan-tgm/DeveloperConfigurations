@@ -20,3 +20,6 @@ git config --global alias.forget '!git ls-files -z $1 | xargs -0 git update-inde
 
 #git remember x //un ignore changes to the file x
 git config --global alias.remember '!git ls-files -z $1 | xargs -0 git update-index --no-assume-unchanged'
+
+#Unstage the last commit and keep the changes
+git config --global alias.unstage 'reset --soft HEAD^'
