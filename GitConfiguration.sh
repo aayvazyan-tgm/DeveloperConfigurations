@@ -1,4 +1,4 @@
-#For windows users: use the git bash to run this script
+#For windows users: use the git bash to run this file
 
 #git lg //pretty log
 git config --global alias.lg 'log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset" --abbrev-commit --date local'
