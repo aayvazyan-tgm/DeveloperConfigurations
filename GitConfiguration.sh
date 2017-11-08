@@ -1,10 +1,10 @@
-#Execute with git bash on windows
+#For windows users: use the git bash to run this script
 
 #git lg //pretty log
 git config --global alias.lg 'log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset" --abbrev-commit --date local'
 
-#git cleanup //Deletes all local repos except master, develop and the current branch
-git config --global alias.cleanup '!git branch --merged | grep  -v "\\*\\|master\\|develop" | xargs -n 1 git branch -d'
+#git cleanup //Deletes all local repos that have been merged (except the current branch, master, release and develop)
+git config --global alias.cleanup '!git branch --merged | grep  -v "\\*\\|master\\|develop\\|release" | xargs -n 1 git branch -d'
 
 #git amend //amend changes to the last commit without editing the message
 git config --global alias.amend 'commit --amend --no-edit'
