@@ -15,11 +15,11 @@ git config --global alias.pf 'push --force'
 #git sb //switch branch by entering partial name
 git config --global alias.sb '!sh -c "git branch -a | grep -v remotes | grep $1 | xargs git checkout"'
 
-#git forget x //ignore changes to the file x
-git config --global alias.forget '!git ls-files -z $1 | xargs -0 git update-index --assume-unchanged'
+#git ignore {file} //ignore changes to the file x
+git config --global alias.ignore '!git ls-files -z $1 | xargs -0 git update-index --assume-unchanged'
 
-#git remember x //un ignore changes to the file x
-git config --global alias.remember '!git ls-files -z $1 | xargs -0 git update-index --no-assume-unchanged'
+#git unignore {file} //unignore changes to the file x
+git config --global alias.unignore '!git ls-files -z $1 | xargs -0 git update-index --no-assume-unchanged'
 
 #git unstage //unstage the last commit and keep the changes
 git config --global alias.unstage 'reset --soft HEAD^'
