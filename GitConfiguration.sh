@@ -23,3 +23,6 @@ git config --global alias.unignore '!git ls-files -z $1 | xargs -0 git update-in
 
 #git unstage //unstage the last commit and keep the changes
 git config --global alias.unstage 'reset --soft HEAD^'
+
+#git originreset //reset the current branch to the origin/remote version of it
+git config --global alias.originreset '!git rev-parse --abbrev-ref HEAD | xargs -I% git reset --hard origin/%'
