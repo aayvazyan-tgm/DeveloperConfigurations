@@ -15,10 +15,10 @@ git config --global alias.pf 'push --force'
 #git sb //switch branch by entering partial name
 git config --global alias.sb '!sh -c "git branch -a | grep -v remotes | grep $1 | xargs git checkout"'
 
-#git ignore {file/folder} //ignore changes to the file x (will only work from the git root)
+#git ignore {file/folder} //ignore changes to the file x (will only work executed from the git root)
 git config --global alias.ignore '!git ls-files -z $1 | xargs -0 git update-index --assume-unchanged'
 
-#git unignore {file/folder} //unignore changes to the file x (will only work from the git root)
+#git unignore {file/folder} //unignore changes to the file x (will only executed work from the git root)
 git config --global alias.unignore '!git ls-files -z $1 | xargs -0 git update-index --no-assume-unchanged'
 
 #git unstage //unstage the last commit and keep the changes
